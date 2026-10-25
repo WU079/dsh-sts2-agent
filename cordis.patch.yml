@@ -1,0 +1,9 @@
+# dsh-sts2-agent 的 bundle patch
+#
+# 装了这个插件后，DSH 启动时会把它插进插件树，id 就叫 sts2-agent。
+# 真正的运行配置在 $DSH_HOME/sts2/config.json（可选，不写就用默认值）。
+- insert:
+    - id: sts2-agent
+      name: dsh-sts2-agent
+      config:
+        enabled: true

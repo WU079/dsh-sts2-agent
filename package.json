@@ -1,0 +1,47 @@
+{
+  "name": "dsh-sts2-agent",
+  "version": "0.1.0",
+  "description": "Let an AI play Slay the Spire 2: screenshot + mouse/keyboard tools, with an automatic play log.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "tools",
+    "README.md",
+    "LICENSE",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "slay-the-spire",
+    "game-agent",
+    "screenshot"
+  ],
+  "author": "WU079",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WU079/dsh-sts2-agent.git"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
